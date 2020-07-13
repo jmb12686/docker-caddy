@@ -8,7 +8,7 @@ WORKDIR /var
 COPY caddy.go /var/caddy.go
 
 RUN apk add --update --no-cache git \
-  && go get github.com/caddyserver/caddy/caddy@v1.0.4 $CADDYPLUGINS \
+  && go get github.com/caddyserver/caddy/caddy@v1.0.5 $CADDYPLUGINS \
   && go mod init caddy \
   && go build \
   && mv caddy /usr/bin/ \
